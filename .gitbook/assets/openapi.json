@@ -1,0 +1,3489 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "FastConnect Trading API v2.0",
+    "version": "v2"
+  },
+  "servers": [
+    {
+      "url": "https://fc-tradeapi.ssi.com.vn/api/v2/Trading/"
+    }
+  ],
+  "paths": {
+    "GetOTP": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Lấy OTP",
+        "description": "Nhận tin nhắn OTP bằng tài khoản/tên đăng nhập đã đăng ký theo phương thức 2FA (SMS,Email).",
+        "operationId": "Auth_GetOtp",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.GetOtpRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.GetOtpRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.GetOtpRequest"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.GetOtpRequest"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.GetOtpRequest"
+              }
+            },
+            "application/x-protobuf": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.GetOtpRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "request"
+      }
+    },
+    "AccessToken": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "summary": "Lấy Token",
+        "description": "Bạn cần tạo mã thông báo JWT với client_id và private đã được cung cấp. Vui lòng xem tài liệu để biết chi tiết.Với mã thông báo truy cập này, bạn có thể sử dụng cho tất cả các mô-đun FastConnect của mình có quyền truy cập.",
+        "operationId": "Auth_AccessToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.AccessTokenRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.AccessTokenRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.AccessTokenRequest"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.AccessTokenRequest"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.AccessTokenRequest"
+              }
+            },
+            "application/x-protobuf": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.AccessTokenRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccessTokenResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccessTokenResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccessTokenResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccessTokenResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccessTokenResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "request"
+      }
+    },
+    "NewOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Đặt lệnh",
+		"description": "API Đặt lệnh",
+        "operationId": "Order_NewOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "application/x-protobuf": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "request"
+      }
+    },
+    "CancelOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Hủy lệnh",
+		"description": "API Hủy lệnh",
+        "operationId": "Order_CancelOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "application/x-protobuf": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "request"
+      }
+    },
+    "derNewOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Đặt lệnh phái sinh",
+		"description": "API Đặt lệnh Phái sinh",
+        "operationId": "Order_DerNewOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            },
+            "application/x-protobuf": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "request"
+      }
+    },
+    "ModifyOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Sửa lệnh",
+		"description": "API Sửa lệnh",
+        "operationId": "Order_ModifyOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "application/x-protobuf": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "request"
+      }
+    },
+    "derCancelOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Hủy lệnh Phái sinh",
+		"description": "Hủy lệnh đối với lệnh Phái sinh",
+        "operationId": "Order_DerCancelOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            },
+            "application/x-protobuf": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "request"
+      }
+    },
+    "derModifyOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "summary": "Sửa lệnh Phái sinh",
+		"description": "Sửa lệnh đối với lệnh Phái sinh",
+        "operationId": "Order_DerModifyOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            },
+            "application/x-protobuf": {
+              "schema": {
+                "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name": "request"
+      }
+    },
+    "orderBook": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Lệnh trong ngày",
+		"description": "Lấy lệnh đặt trong ngày",
+        "operationId": "Query_GetOrderBook",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderBookResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderBookResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderBookResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderBookResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderBookResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cashAcctBal": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Thông tin tài khoản cơ sở",
+		"description": "Truy vấn thông tin tài khoản cơ sở",
+        "operationId": "Query_GetAccountBalance",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccountBalanceResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccountBalanceResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccountBalanceResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccountBalanceResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccountBalanceResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "derivAcctBal": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Thông tin tài khoản phái sinh",
+		"description": "Truy vấn thông tin tài khoản phái sinh ",
+        "operationId": "Query_GetDerAccountBalance",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerAccountBalanceResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerAccountBalanceResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerAccountBalanceResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerAccountBalanceResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerAccountBalanceResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ppmmraccount": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Sức mua tài khoản Margin",
+		"description": "Truy vấn sức mua của tài khoản Margin",
+        "operationId": "Query_GetPPMMRAccount",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.PPMMRAccountResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.PPMMRAccountResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.PPMMRAccountResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.PPMMRAccountResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.PPMMRAccountResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "stockPosition": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Vị thế của tài khoản cơ sở",
+		"description": "Truy vấn vị thế của tài khoản cơ sở",
+        "operationId": "Query_GetStockPosition",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.StockPositionResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.StockPositionResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.StockPositionResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.StockPositionResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.StockPositionResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "derivPosition": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Vị thế của tài khoản phái sinh",
+		"description": "Truy vấn vị thế của tài khoản phái sinh",
+        "operationId": "Query_GetDerPosition",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "request.querySummary",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerPositionResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerPositionResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerPositionResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerPositionResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerPositionResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "maxBuyQty": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Sức mua tối đa",
+		"description": "Truy vấn số lượng mua tối đa ",
+        "operationId": "Query_GetMaxBuyQty",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "request.instrumentID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "request.price",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxBuyQtyResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxBuyQtyResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxBuyQtyResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxBuyQtyResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxBuyQtyResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "maxSellQty": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Khối lượng bán tối đa",
+		"description": "Truy vấn số lượng bán tối đa",
+        "operationId": "Query_GetMaxSellQty",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "request.instrumentID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "request.price",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxSellQtyResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxSellQtyResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxSellQtyResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxSellQtyResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxSellQtyResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "orderHistory": {
+      "get": {
+        "tags": [
+          "Query"
+        ],
+        "summary": "Lịch sử lệnh",
+		"description": "Truy vấn lịch sử lệnh quá khứ",
+        "operationId": "Query_GetOrderHistories",
+        "parameters": [
+          {
+            "name": "request.account",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "request.startDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "request.endDate",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderHistoryResponse]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderHistoryResponse]"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderHistoryResponse]"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderHistoryResponse]"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderHistoryResponse]"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              },
+              "application/x-protobuf": {
+                "schema": {
+                  "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SSI.TradingAPI.DataContract.Requests.V2.GetOtpRequest": {
+        "type": "object",
+        "properties": {
+          "consumerID": {
+            "type": "string"
+          },
+          "consumerSecret": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Response": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.AccessTokenRequest": {
+        "type": "object",
+        "properties": {
+          "consumerID": {
+            "type": "string"
+          },
+          "consumerSecret": {
+            "type": "string"
+          },
+          "twoFactorType": {
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "code": {
+            "type": "string"
+          },
+          "isSave": {
+            "type": "boolean"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccessTokenResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.AccessTokenResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.AccessTokenResponse": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.NewOrderRequest": {
+        "type": "object",
+        "properties": {
+          "instrumentID": {
+            "type": "string"
+          },
+          "market": {
+            "type": "string"
+          },
+          "buySell": {
+            "type": "string"
+          },
+          "orderType": {
+            "type": "string"
+          },
+          "channelID": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "account": {
+            "type": "string"
+          },
+          "requestID": {
+            "type": "string"
+          },
+          "stopOrder": {
+            "type": "boolean"
+          },
+          "stopPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "stopType": {
+            "type": "string"
+          },
+          "stopStep": {
+            "type": "number",
+            "format": "double"
+          },
+          "lossStep": {
+            "type": "number",
+            "format": "double"
+          },
+          "profitStep": {
+            "type": "number",
+            "format": "double"
+          },
+          "code": {
+            "type": "string"
+          },
+          "modifiable": {
+            "type": "boolean"
+          },
+          "deviceId": {
+            "type": "string"
+          },
+          "userAgent": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.NewOrderResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.NewOrderResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.NewOrderResponse": {
+        "type": "object",
+        "properties": {
+          "requestID": {
+            "type": "string"
+          },
+          "requestData": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.NewOrderModel"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.NewOrderModel": {
+        "type": "object",
+        "properties": {
+          "instrumentID": {
+            "type": "string"
+          },
+          "market": {
+            "type": "string"
+          },
+          "buySell": {
+            "type": "string"
+          },
+          "orderType": {
+            "type": "string"
+          },
+          "channelID": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "account": {
+            "type": "string"
+          },
+          "stopOrder": {
+            "type": "boolean"
+          },
+          "stopPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "stopType": {
+            "type": "string"
+          },
+          "stopStep": {
+            "type": "number",
+            "format": "double"
+          },
+          "lossStep": {
+            "type": "number",
+            "format": "double"
+          },
+          "profitStep": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.CancelOrderRequest": {
+        "type": "object",
+        "properties": {
+          "orderID": {
+            "type": "string"
+          },
+          "account": {
+            "type": "string"
+          },
+          "marketID": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "buySell": {
+            "type": "string"
+          },
+          "requestID": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "deviceId": {
+            "type": "string"
+          },
+          "userAgent": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.CancelOrderResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.CancelOrderResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.CancelOrderResponse": {
+        "type": "object",
+        "properties": {
+          "requestID": {
+            "type": "string"
+          },
+          "requestData": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.CancelOrderModel"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.CancelOrderModel": {
+        "type": "object",
+        "properties": {
+          "orderID": {
+            "type": "string"
+          },
+          "account": {
+            "type": "string"
+          },
+          "marketID": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "buySell": {
+            "type": "string"
+          },
+          "requestID": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.ModifyOrderRequest": {
+        "type": "object",
+        "properties": {
+          "orderID": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "account": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "marketID": {
+            "type": "string"
+          },
+          "buySell": {
+            "type": "string"
+          },
+          "requestID": {
+            "type": "string"
+          },
+          "orderType": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "deviceId": {
+            "type": "string"
+          },
+          "userAgent": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.ModifyOrderResponse": {
+        "type": "object",
+        "properties": {
+          "requestID": {
+            "type": "string"
+          },
+          "requestData": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.ModifyOrderModel"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.ModifyOrderModel": {
+        "type": "object",
+        "properties": {
+          "orderID": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "account": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "marketID": {
+            "type": "string"
+          },
+          "buySell": {
+            "type": "string"
+          },
+          "orderType": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.OrderBookRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderBookResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.OrderBookResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.OrderBookResponse": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.OrderHistoryItem"
+            }
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.OrderHistoryItem": {
+        "type": "object",
+        "properties": {
+          "uniqueID": {
+            "type": "string"
+          },
+          "orderID": {
+            "type": "string"
+          },
+          "buySell": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "filledQty": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "orderStatus": {
+            "type": "string"
+          },
+          "marketID": {
+            "type": "string"
+          },
+          "inputTime": {
+            "type": "string"
+          },
+          "modifiedTime": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "orderType": {
+            "type": "string"
+          },
+          "cancelQty": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "avgPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "isForcesell": {
+            "type": "string"
+          },
+          "isShortsell": {
+            "type": "string"
+          },
+          "rejectReason": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.AccountBalanceRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.AccountBalanceResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.AccountBalanceResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.AccountBalanceResponse": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "cashBal": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cashOnHold": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "secureAmount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "withdrawable": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "receivingCashT1": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "receivingCashT2": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "matchedBuyVolume": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "matchedSellVolume": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "debt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "unMatchedBuyVolume": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "unMatchedSellVolume": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "paidCashT1": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "paidCashT2": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cia": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "purchasingPower": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalAssets": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.DerAccountBalanceRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerAccountBalanceResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.DerAccountBalanceResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.DerAccountBalanceResponse": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "accountBalance": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fee": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "commission": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "interest": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "loan": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "deliveryAmount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "floatingPL": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPL": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "marginable": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "depositable": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rcCall": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "withdrawable": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nonCashDrawableRCCall": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "internalAssets": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.AssetsItem"
+          },
+          "exchangeAssets": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.AssetsItem"
+          },
+          "internalMargin": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.InternalMarginItem"
+          },
+          "exchangeMargin": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.ExchangeMarginItem"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.AssetsItem": {
+        "type": "object",
+        "properties": {
+          "cash": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "validNonCash": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalValue": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "maxValidNonCash": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cashWithdrawable": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ee": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.InternalMarginItem": {
+        "type": "object",
+        "properties": {
+          "initialMargin": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "deliveryMargin": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "marginReq": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "accountRatio": {
+            "type": "number",
+            "format": "double"
+          },
+          "usedLimitWarningLevel1": {
+            "type": "number",
+            "format": "double"
+          },
+          "usedLimitWarningLevel2": {
+            "type": "number",
+            "format": "double"
+          },
+          "usedLimitWarningLevel3": {
+            "type": "number",
+            "format": "double"
+          },
+          "marginCall": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.ExchangeMarginItem": {
+        "type": "object",
+        "properties": {
+          "marginReq": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "accountRatio": {
+            "type": "number",
+            "format": "double"
+          },
+          "usedLimitWarningLevel1": {
+            "type": "number",
+            "format": "double"
+          },
+          "usedLimitWarningLevel2": {
+            "type": "number",
+            "format": "double"
+          },
+          "usedLimitWarningLevel3": {
+            "type": "number",
+            "format": "double"
+          },
+          "marginCall": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.PPMMRAccountRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.PPMMRAccountResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.PPMMRAccountResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.PPMMRAccountResponse": {
+        "type": "object",
+        "properties": {
+          "collateralAsset": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "callLMW": {
+            "type": "number",
+            "format": "double"
+          },
+          "liability": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "eeOrigin": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "forceLMV": {
+            "type": "number",
+            "format": "double"
+          },
+          "equity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ee": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "callMargin": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cashBalance": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "purchasingPower": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "callForcesell": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lmv": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "marginCall": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "withdrawal": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "collateralA": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "action": {
+            "type": "string"
+          },
+          "marginRatio": {
+            "type": "number",
+            "format": "double"
+          },
+          "debt": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "accruedInterest": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "holdRight": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "preLoan": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fees": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "buyUnmatch": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ap": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "apT1": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sellUnmatch": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cia": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ar": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "arT1": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ppCredit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "creditLimit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalAssets": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "marginCallLMVSold": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lmvNonMarginable": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "eeCredit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalEquity": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "eE90": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "eE80": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "eE70": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "eE60": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "eE50": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.StockPositionRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.StockPositionResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.StockPositionResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.StockPositionResponse": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "totalMarketValue": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "stockPositions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.StockPositionItem"
+            }
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.StockPositionItem": {
+        "type": "object",
+        "properties": {
+          "marketID": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "onHand": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "block": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "bonus": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "buyT0": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "buyT1": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "buyT2": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sellT0": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sellT1": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sellT2": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "avgPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "mortgage": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sellableQty": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "holdForTrade": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "marketPrice": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.DerPositionRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "querySummary": {
+            "type": "boolean"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.DerPositionResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.DerPositionResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.DerPositionResponse": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "openPosition": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.DerPositionItem"
+            }
+          },
+          "closePosition": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.DerPositionItem"
+            }
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.DerPositionItem": {
+        "type": "object",
+        "properties": {
+          "marketID": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "longQty": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "shortQty": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "net": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "bidAvgPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "askAvgPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "tradePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "marketPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "floatingPL": {
+            "type": "number",
+            "format": "double"
+          },
+          "tradingPL": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.MaxBuyQtyRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxBuyQtyResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.MaxBuyQtyResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.MaxBuyQtyResponse": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "maxBuyQty": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "marginRatio": {
+            "type": "string"
+          },
+          "purchasingPower": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.MaxSellQtyRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "instrumentID": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.MaxSellQtyResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.MaxSellQtyResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.MaxSellQtyResponse": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "maxSellQty": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Requests.V2.OrderHistoryRequest": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.SingleResponse[SSI.TradingAPI.DataContract.Responses.OrderHistoryResponse]": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.OrderHistoryResponse"
+          }
+        }
+      },
+      "SSI.TradingAPI.DataContract.Responses.OrderHistoryResponse": {
+        "type": "object",
+        "properties": {
+          "orderHistories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SSI.TradingAPI.DataContract.Responses.OrderHistoryItem"
+            }
+          },
+          "account": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "Token": {
+        "type": "apiKey",
+        "description": "API Authentication",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  }
+}
